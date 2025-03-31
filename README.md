@@ -17,7 +17,11 @@ Au fil des versions, l’extension peut maintenant ne plus afficher d’alertes 
 
 Le code est géré est maintenu par moi même. Disclaimer : je ne suis pas développeur, donc n’hésitez pas à me proposer des pistes d’améliorations. Dans la mesure du possible et de mes connaissances, je tâcherais d’y répondre. 
 
-Les icônes ont été réalisées par Flock, en plus des images d’illustrations des articles sur notre extension. 
+Les icônes ont été réalisées par Flock, en plus des images d’illustrations des articles sur notre extension. Optimisation PNG par [Damien Bigot](https://github.com/damienbigot).
+
+L'icône générique d'alerte a été réalisée pour le projet [ForkAwesome](https://forkawesome.github.io/Fork-Awesome/) et est sous licence [SIL OFL 1.1](https://openfontlicense.org/).
+
+Raphaël d'[OnlineCreation](https://onlinecreation.pro/) a participé au développement de l’extension.
 
 ## Pourquoi la liste n’est pas publique ?
 

@@ -5,32 +5,20 @@
   "description": "Affiche une alerte sur des sites g\u00e9n\u00e9r\u00e9s tout ou partie par des IA. Liste g\u00e9r\u00e9e par Next.ink",
   "permissions": [
     "storage",
-    "tabs",
-    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
     "https://dl.red.flag.domains/*",
     "https://next.ink/*",
     "http://gavois.fr/*",
-    "alarms"
+    "alarms",
+    "<all_urls>"
   ],
   "background": {
     "scripts": [
       "background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "css": [
-        "styles.css"
-      ]
-    }
-  ],
   "browser_action": {
     "default_popup": "popup.html",
     "browser_style": true,
@@ -50,7 +38,9 @@
     "bloom-filter.json",
     "test.txt",
     "test2.txt",
-    "admin.html"
+    "admin.html",
+    "alert.html",
+    "alert.js"
   ],
   "icons": {
     "16": "icone-app_ia16.png",
