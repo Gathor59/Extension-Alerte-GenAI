@@ -1,5 +1,6 @@
 // Informer le background.js que le content script est chargé
-browser.runtime.sendMessage({ action: "contentScriptReady", url: window.location.href });
+browser.runtime.sendMessage({ action: "contentScriptReady", url: window.location.href })
+  .catch(() => {});
 
 function getDomainFromUrl(url) {
   try {
@@ -12,7 +13,7 @@ function getDomainFromUrl(url) {
 
 // Configuration des styles par type de notification
 const NOTIFICATION_STYLES = {
-  'genai': {
+ 'genai': {
     backgroundColor: 'rgb(141, 141, 141)',
     buttonColor: 'rgb(248, 134, 68)',
     imageData: "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"
@@ -32,44 +33,27 @@ const NOTIFICATION_STYLES = {
 // Variable pour éviter les doublons de notifications
 let notificationDisplayed = false;
 
-async function createNotificationBlock(matches, currentUrl) {
-  // Marquer qu'une notification est en cours d'affichage
-  notificationDisplayed = true;
-  
-  // Vérification des données reçues
-  if (!matches || matches.length === 0) {
-    notificationDisplayed = false;
-    return;
+// Fonction pour vérifier si un domaine est ignoré (externalisée)
+async function isDomainIgnored(domain, category) {
+  try {
+    const storageKey = `ignoredDomains_${category}`;
+    const result = await browser.storage.local.get(storageKey);
+    const ignoredDomains = result[storageKey] || [];
+    return ignoredDomains.includes(domain);
+  } catch (error) {
+    return false;
   }
+}
 
-  // Filtrer les correspondances pour exclure les domaines déjà ignorés
-  const filteredMatches = [];
-  for (const match of matches) {
-    const domain = getDomainFromUrl(currentUrl);
-    const isIgnored = await isDomainIgnored(domain, match.category);
-    
-    if (!isIgnored) {
-      filteredMatches.push(match);
-    }
-  }
-
-  // Ne pas afficher de notification si tous les domaines sont ignorés
-  if (filteredMatches.length === 0) {
-    notificationDisplayed = false;
-    return;
-  }
-
-  // Supprimer toutes les anciennes notifications existantes
+// Fonction pour créer le conteneur principal avec Shadow DOM
+function createNotificationHost() {
+  // Supprimer les anciennes notifications
   document.querySelectorAll('[id^="nx-alert-"], [id="extension-host"]').forEach(el => el.remove());
 
-  // Générer un ID aléatoire pour éviter d'être ciblé par CSS
   const randomId = `nx-alert-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
-  
-  // Créer un conteneur hôte avec l'ID aléatoire
   const host = document.createElement('div');
   host.id = randomId;
   
-  // Styles anti-blocage directement en ligne
   host.style.cssText = `
     display: block !important;
     visibility: visible !important;
@@ -83,10 +67,9 @@ async function createNotificationBlock(matches, currentUrl) {
     pointer-events: auto !important;
   `;
   
-  // Création du shadow DOM en mode 'closed' pour isolation
   const shadow = host.attachShadow({mode: 'closed'});
   
-  // Injecter des styles directement dans le shadow DOM pour les protéger
+  // Ajouter les styles CSS
   const style = document.createElement('style');
   style.textContent = `
     :host {
@@ -148,92 +131,72 @@ async function createNotificationBlock(matches, currentUrl) {
   
   shadow.appendChild(style);
   
-  // Créer le conteneur principal pour la notification
-  const block = document.createElement('div');
-  block.id = 'extension-notification';
-  
-  // Créer le contenu HTML pour chaque notification
-  const notificationsHtml = filteredMatches.map((match, index) => {
-    const styles = NOTIFICATION_STYLES[match.category] || NOTIFICATION_STYLES['genai'];
-    
-    // Créer un conteneur pour cette notification
-    const notificationDiv = document.createElement('div');
-    
-    // Appliquer les styles pour la séparation si nécessaire
-    if (index < filteredMatches.length - 1) {
-      notificationDiv.style.cssText = `
-        margin-bottom: 20px !important;
-        padding-bottom: 20px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-      `;
-    }
-    
-    // Créer le contenu interne
-    const innerDiv = document.createElement('div');
-    innerDiv.style.cssText = `
-      display: flex !important;
-      align-items: center !important;
-      gap: 15px !important;
-      background-color: ${styles.backgroundColor} !important;
-      padding: 15px !important;
-      border-radius: 8px !important;
-    `;
-    
-    // Créer l'image
-    const img = document.createElement('img');
-    img.src = `data:image/png;base64,${styles.imageData}`;
-    img.style.cssText = 'width: 64px !important; height: 64px !important;';
-    
-    // Créer le conteneur de texte
-    const textDiv = document.createElement('div');
-    textDiv.style.cssText = 'flex: 1 !important; text-align: left !important;';
-    
-    // Créer le message
-    const messagePara = document.createElement('p');
-    messagePara.style.cssText = 'margin: 0 !important; white-space: pre-wrap !important;';
-    messagePara.innerHTML = match.config.message;
-    
-    // Créer le conteneur de bouton
-    const buttonDiv = document.createElement('div');
-    buttonDiv.style.cssText = 'margin-top: 10px !important;';
-    
-    // Créer le bouton d'info
-    const infoButton = document.createElement('button');
-    infoButton.className = 'info-btn';
-    infoButton.dataset.url = match.config.infoUrl;
-    infoButton.dataset.category = match.category;
-    infoButton.style.cssText = `
-      padding: 8px 16px !important;
-      background: ${styles.buttonColor} !important;
-      color: white !important;
-      border: none !important;
-      border-radius: 4px !important;
-      cursor: pointer !important;
-    `;
-    infoButton.textContent = 'Plus d\'infos';
-    
-    // Assembler le tout
-    buttonDiv.appendChild(infoButton);
-    textDiv.appendChild(messagePara);
-    textDiv.appendChild(buttonDiv);
-    innerDiv.appendChild(img);
-    innerDiv.appendChild(textDiv);
-    notificationDiv.appendChild(innerDiv);
-    
-    return notificationDiv;
-  });
+  return { host, shadow, randomId };
+}
 
-  // Ajouter les notifications à un conteneur
-  const notificationsContainer = document.createElement('div');
-  notificationsContainer.style.cssText = 'margin-bottom: 20px !important;';
-  notificationsHtml.forEach(notificationElement => {
-    notificationsContainer.appendChild(notificationElement);
-  });
+// Fonction pour créer une notification individuelle
+function createSingleNotification(match, index, totalCount) {
+  const styles = NOTIFICATION_STYLES[match.category] || NOTIFICATION_STYLES['genai'];
+  const notificationDiv = document.createElement('div');
   
-  // Ajouter le conteneur de notifications au bloc principal
-  block.appendChild(notificationsContainer);
+  if (index < totalCount - 1) {
+    notificationDiv.style.cssText = `
+      margin-bottom: 20px !important;
+      padding-bottom: 20px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    `;
+  }
   
-  // Créer la section pour la case à cocher
+  const innerDiv = document.createElement('div');
+  innerDiv.style.cssText = `
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    background-color: ${styles.backgroundColor} !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+  `;
+  
+  const img = document.createElement('img');
+  img.src = `data:image/png;base64,${styles.imageData}`;
+  img.style.cssText = 'width: 64px !important; height: 64px !important;';
+  
+  const textDiv = document.createElement('div');
+  textDiv.style.cssText = 'flex: 1 !important; text-align: left !important;';
+  
+  const messagePara = document.createElement('p');
+  messagePara.style.cssText = 'margin: 0 !important; white-space: pre-wrap !important;';
+  messagePara.innerHTML = match.config.message;
+  
+  const buttonDiv = document.createElement('div');
+  buttonDiv.style.cssText = 'margin-top: 10px !important;';
+  
+  const infoButton = document.createElement('button');
+  infoButton.className = 'info-btn';
+  infoButton.dataset.url = match.config.infoUrl;
+  infoButton.dataset.category = match.category;
+  infoButton.style.cssText = `
+    padding: 8px 16px !important;
+    background: ${styles.buttonColor} !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+  `;
+  infoButton.textContent = 'Plus d\'infos';
+  
+  buttonDiv.appendChild(infoButton);
+  textDiv.appendChild(messagePara);
+  textDiv.appendChild(buttonDiv);
+  innerDiv.appendChild(img);
+  innerDiv.appendChild(textDiv);
+  notificationDiv.appendChild(innerDiv);
+  
+  return notificationDiv;
+}
+
+// Fonction pour créer la section de contrôles (checkbox + bouton fermer)
+function createControlsSection() {
   const checkboxContainer = document.createElement('div');
   checkboxContainer.style.cssText = `
     margin-top: 15px !important;
@@ -243,7 +206,6 @@ async function createNotificationBlock(matches, currentUrl) {
   `;
   
   const checkboxLabel = document.createElement('label');
-  
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.id = 'dont-show-again';
@@ -251,10 +213,8 @@ async function createNotificationBlock(matches, currentUrl) {
   
   checkboxLabel.appendChild(checkbox);
   checkboxLabel.appendChild(document.createTextNode('Ne plus m\'alerter sur ce site pour toutes les catégories'));
-  
   checkboxContainer.appendChild(checkboxLabel);
   
-  // Créer la section du bouton de fermeture
   const closeButtonContainer = document.createElement('div');
   closeButtonContainer.style.cssText = `
     display: flex !important;
@@ -273,10 +233,165 @@ async function createNotificationBlock(matches, currentUrl) {
     cursor: pointer !important;
   `;
   closeButton.textContent = 'Fermer';
-  
   closeButtonContainer.appendChild(closeButton);
   
-  // Ajouter tout au bloc principal
+  return { checkboxContainer, closeButtonContainer, checkbox, closeButton };
+}
+
+// Fonction pour gérer la fermeture et la sauvegarde des préférences
+async function handleNotificationClose(checkbox, matches, currentUrl, host) {
+  if (checkbox.checked) {
+    const domain = getDomainFromUrl(currentUrl);
+    for (const match of matches) {
+      const storageKey = `ignoredDomains_${match.category}`;
+      try {
+        const result = await browser.storage.local.get(storageKey);
+        const ignoredDomains = result[storageKey] || [];
+        if (!ignoredDomains.includes(domain)) {
+          ignoredDomains.push(domain);
+          await browser.storage.local.set({ [storageKey]: ignoredDomains });
+        }
+      } catch (error) {
+        // Ignorer les erreurs de storage
+      }
+    }
+  }
+  
+  host.remove();
+  notificationDisplayed = false;
+}
+
+// Fonction pour créer un iframe de fallback
+function createFallbackIframe() {
+  const iframe = document.createElement('iframe');
+  iframe.id = `nx-frame-${Date.now()}`;
+  iframe.style.cssText = `
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    z-index: 2147483647 !important;
+    background: transparent !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  `;
+  
+  document.documentElement.appendChild(iframe);
+  
+  try {
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.documentElement.innerHTML = '';
+    
+    const iframeStyle = iframeDoc.createElement('style');
+    iframeStyle.textContent = `
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    `;
+    
+    iframeDoc.head.appendChild(iframeStyle);
+    
+    const alertContainer = iframeDoc.createElement('div');
+    alertContainer.style.cssText = `
+      background-color: rgb(141, 141, 141);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 90%;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    `;
+    
+    alertContainer.innerHTML = `
+      <h3>Alerte de sécurité</h3>
+      <p>Ce site tente de bloquer les avertissements de sécurité.</p>
+      <p>Attention: ce site figure dans une ou plusieurs listes de surveillance.</p>
+      <button style="
+        padding: 8px 16px;
+        background: rgb(248, 134, 68);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      ">Fermer</button>
+    `;
+    
+    iframeDoc.body.appendChild(alertContainer);
+    
+    const closeBtn = alertContainer.querySelector('button');
+    closeBtn.addEventListener('click', () => {
+      iframe.remove();
+      notificationDisplayed = false;
+    });
+    
+  } catch (error) {
+    iframe.remove();
+    notificationDisplayed = false;
+  }
+}
+
+// Fonction principale pour créer la notification
+async function createNotificationBlock(matches, currentUrl) {
+  if (notificationDisplayed) {
+    return;
+  }
+  
+  notificationDisplayed = true;
+  
+  if (!matches || matches.length === 0) {
+    notificationDisplayed = false;
+    return;
+  }
+
+  // Filtrer les correspondances pour exclure les domaines ignorés
+  const filteredMatches = [];
+  for (const match of matches) {
+    const domain = getDomainFromUrl(currentUrl);
+    const isIgnored = await isDomainIgnored(domain, match.category);
+    
+    if (!isIgnored) {
+      filteredMatches.push(match);
+    }
+  }
+
+  if (filteredMatches.length === 0) {
+    notificationDisplayed = false;
+    return;
+  }
+
+  // Créer le conteneur principal
+  const { host, shadow, randomId } = createNotificationHost();
+  
+  // Créer le conteneur principal pour la notification
+  const block = document.createElement('div');
+  block.id = 'extension-notification';
+  
+  // Créer le conteneur des notifications
+  const notificationsContainer = document.createElement('div');
+  notificationsContainer.style.cssText = 'margin-bottom: 20px !important;';
+  
+  // Ajouter chaque notification
+  filteredMatches.forEach((match, index) => {
+    const notificationElement = createSingleNotification(match, index, filteredMatches.length);
+    notificationsContainer.appendChild(notificationElement);
+  });
+  
+  block.appendChild(notificationsContainer);
+  
+  // Créer les contrôles (checkbox + bouton fermer)
+  const { checkboxContainer, closeButtonContainer, checkbox, closeButton } = createControlsSection();
   block.appendChild(checkboxContainer);
   block.appendChild(closeButtonContainer);
   
@@ -290,146 +405,21 @@ async function createNotificationBlock(matches, currentUrl) {
     });
   });
   
-  // Fonction pour vérifier si un domaine est ignoré
-  async function isDomainIgnored(domain, category) {
-    try {
-      const storageKey = `ignoredDomains_${category}`;
-      const result = await browser.storage.local.get(storageKey);
-      const ignoredDomains = result[storageKey] || [];
-      return ignoredDomains.includes(domain);
-    } catch (error) {
-      return false;
-    }
-  }
-  
   // Gestion du bouton de fermeture
-  function handleClose() {
-    // Éviter les déclenchements multiples
-    closeButton.removeEventListener('click', handleClose);
-    
-    if (checkbox.checked) {
-      const domain = getDomainFromUrl(currentUrl);
-      // Ignorer le domaine pour toutes les catégories
-      matches.forEach(async (match) => {
-        const storageKey = `ignoredDomains_${match.category}`;
-        try {
-          const result = await browser.storage.local.get(storageKey);
-          const ignoredDomains = result[storageKey] || [];
-          if (!ignoredDomains.includes(domain)) {
-            ignoredDomains.push(domain);
-            await browser.storage.local.set({ [storageKey]: ignoredDomains });
-          }
-        } catch (error) {
-        }
-      });
-    }
-    
-    // Supprimer l'élément du DOM
-    host.remove();
-    
-    // Réinitialiser l'état de la notification
-    notificationDisplayed = false;
-  }
+  closeButton.addEventListener('click', () => {
+    closeButton.removeEventListener('click', arguments.callee);
+    handleNotificationClose(checkbox, matches, currentUrl, host);
+  });
   
-  // Attacher l'événement de fermeture
-  closeButton.addEventListener('click', handleClose);
-  
-  // Essayer plusieurs méthodes pour ajouter l'élément à la page
-  // Stratégie 1: Ajouter au body normalement
+  // Ajouter au DOM
   document.body.appendChild(host);
   
-  // Stratégie 2: Si la méthode précédente est bloquée, créer un iframe isolé
+  // Vérification de blocage avec fallback iframe
   setTimeout(() => {
-    // Vérifier si l'élément a été supprimé ou caché
     if (!document.getElementById(randomId) || 
         window.getComputedStyle(host).display === 'none' || 
         window.getComputedStyle(host).visibility === 'hidden') {
-        
-      // Créer un iframe pour isolation complète
-      const iframe = document.createElement('iframe');
-      iframe.id = `nx-frame-${Date.now()}`;
-      iframe.style.cssText = `
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        border: none !important;
-        z-index: 2147483647 !important;
-        background: transparent !important;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      `;
-      
-      // Ajouter l'iframe au document
-      document.documentElement.appendChild(iframe);
-      
-      // Accéder au document de l'iframe et y ajouter la notification
-      try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        
-        // Réinitialiser les styles de l'iframe
-        iframeDoc.documentElement.innerHTML = '';
-        
-        // Ajouter des styles de base à l'iframe
-        const iframeStyle = iframeDoc.createElement('style');
-        iframeStyle.textContent = `
-          body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-          }
-        `;
-        
-        iframeDoc.head.appendChild(iframeStyle);
-        
-        // Pour les besoins de cet exemple, on affiche un message simple
-        const alertContainer = iframeDoc.createElement('div');
-        alertContainer.style.cssText = `
-          background-color: rgb(141, 141, 141);
-          padding: 20px;
-          border-radius: 10px;
-          max-width: 800px;
-          width: 90%;
-          color: white;
-          font-family: Arial, sans-serif;
-          text-align: center;
-        `;
-        
-        alertContainer.innerHTML = `
-          <h3>Alerte de sécurité</h3>
-          <p>Ce site tente de bloquer les avertissements de sécurité.</p>
-          <p>Attention: ce site figure dans une ou plusieurs listes de surveillance.</p>
-          <button style="
-            padding: 8px 16px;
-            background: rgb(248, 134, 68);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-          ">Fermer</button>
-        `;
-        
-        iframeDoc.body.appendChild(alertContainer);
-        
-        // Gérer la fermeture
-        const closeBtn = alertContainer.querySelector('button');
-        closeBtn.addEventListener('click', () => {
-          iframe.remove();
-          notificationDisplayed = false;
-        });
-        
-      } catch (error) {
-        iframe.remove();
-        notificationDisplayed = false;
-      }
+      createFallbackIframe();
     }
   }, 100);
 }
@@ -447,7 +437,6 @@ browser.runtime.onMessage.addListener((request, sender) => {
       return Promise.resolve({status: "Erreur de notification"});
     }
   } else if (request.action === "checkReady") {
-    // Répondre que le content script est prêt
     return Promise.resolve({status: "ready", url: window.location.href});
   } else if (request.action === "checkAlive") {
     return Promise.resolve({status: "alive", url: window.location.href});
@@ -459,10 +448,9 @@ browser.runtime.onMessage.addListener((request, sender) => {
 // Gestionnaire d'événements pour la visibilité de la page
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
-    // Informer le background que cette page est de nouveau visible
     browser.runtime.sendMessage({ 
       action: "pageRevisited", 
       url: window.location.href 
-    });
+    }).catch(() => {});
   }
 });

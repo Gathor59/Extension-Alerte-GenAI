@@ -4,22 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
- 
- body {
-  max-width: 700px;
-  min-width: 500px; /* Ajoutez cette ligne */
-  width: 100%;
-  height: auto;
-  /* Enlever toutes les propriétés de hauteur */
-  padding: 15px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  box-sizing: border-box;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+    body {
+      max-width: 700px;
+      min-width: 500px;
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
     @media (max-width: 500px) {
       body {
@@ -43,7 +41,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
-      font-size: 16px; /* Taille minimum recommandée pour mobile */
+      font-size: 16px;
     }
 
     button {
@@ -55,17 +53,16 @@
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
-      min-height: 44px; /* Taille minimum pour cible tactile */
+      min-height: 44px;
     }
 
     button:hover {
       background-color: #45a049;
     }
 
-    /* Style spécifique pour le tactile */
     @media (hover: none) {
       button:hover {
-        background-color: #4CAF50; /* Désactive l'effet hover sur mobile */
+        background-color: #4CAF50;
       }
     }
 
@@ -77,31 +74,27 @@
       padding: 10px;
     }
 
-    /* Style pour la liste */
     ul {
       margin: 5px 0;
       padding-left: 20px;
     }
 
-    /* Ajout d'espace pour le scroll */
     .content-wrapper {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    /* Support du mode sombre */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #202124;
         color: #ffffff;
       }
 
-      input, select {
+      input, select, textarea {
         background-color: #303134;
         color: #ffffff;
         border-color: #5f6368;
-    
       }
 
       button {
@@ -112,15 +105,6 @@
       button:hover {
         background-color: #7aa0e4;
       }
-
-      form {
-  margin-bottom: 0;    /* Ajout */
-}
-
-button[type="submit"] {
-  margin-bottom: 0;    /* Ajout */
-}
-
     }
   </style>
 </head>
@@ -137,33 +121,39 @@ button[type="submit"] {
       <li>usurpent la réputation de « noms de domaine expirés »,</li>
     </ul>
     <p style="margin: 15px 0;"><a href="https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/">Lire notre enquête sur Next.ink</a></p>
-    <form id="reportForm">
-      <div class="form-group">
-        <label for="siteUrl">Signalez-nous un site d'un clic, via ce formulaire</label>
-        <input type="url" id="siteUrl" required>
-      </div>
-      <div class="form-group">
-        <label for="category">Catégorie</label>
-        <select id="category">
-          <option value="">Sélectionnez une catégorie</option>
-          <option value="genai">Site généré par IA</option>
-          <option value="scam">Site frauduleux</option>
-          <option value="misinformation">Désinformation</option>
-          <option value="other">Autre</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="description">Description (optionnelle)</label>
-        <textarea id="description" rows="3"></textarea>
-      </div>
-      <div class="form-group"></div>
-      <button type="submit">Signaler ce site</button>  <!-- Plus de form-group superflu -->
-    </div>
-    </form>
-    <div id="successMessage" class="success-message">
-      Site signalé avec succès !
-    </div>
   </div>
+  
+  <form id="reportForm">
+    <div class="form-group">
+      <label for="siteUrl">Signalez-nous un site d'un clic, via ce formulaire</label>
+      <input type="url" id="siteUrl" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email pour vous répondre si besoin (optionnel)</label>
+      <input type="email" id="email" placeholder="votre@email.com">
+    </div>
+    <div class="form-group">
+      <label for="category">Catégorie</label>
+      <select id="category">
+        <option value="">Sélectionnez une catégorie</option>
+        <option value="genai">Site généré par IA</option>
+        <option value="scam">Site frauduleux</option>
+        <option value="misinformation">Désinformation</option>
+        <option value="other">Autre</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Description (optionnelle)</label>
+      <textarea id="description" rows="3"></textarea>
+    </div>
+    <button type="submit">Signaler ce site</button>
+  </form>
+  
+  <div id="successMessage" class="success-message">
+    Site signalé avec succès !
+  </div>
+  
+  <script src="browser-polyfill.min.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

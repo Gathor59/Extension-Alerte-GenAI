@@ -140,9 +140,110 @@
             color: #a94442;
             display: block;
         }
+
+
+
+
+
+
+
+
+
+
+        .stats-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.stat-card span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+
+
+
+
     </style>
 </head>
 <body>
+    
+    
+    
+    
+    
+    
+    <!-- Section statistiques -->
+<div class="stats-section">
+  <h2>Statistiques des alertes</h2>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Aujourd'hui</h3>
+      <span id="stats-today">0</span>
+    </div>
+    <div class="stat-card">
+      <h3>Cette semaine</h3>
+      <span id="stats-week">0</span>
+    </div>
+    <div class="stat-card">
+      <h3>Ce mois</h3>
+      <span id="stats-month">0</span>
+    </div>
+    <div class="stat-card">
+      <h3>Total</h3>
+      <span id="stats-total">0</span>
+    </div>
+  </div>
+  
+  <div class="category-breakdown">
+    <h3>Répartition par catégorie (aujourd'hui)</h3>
+    <div class="category-stats">
+      <span>GenAI: <strong id="stats-genai-today">0</strong></span>
+      <span>RedFlag: <strong id="stats-redflag-today">0</strong></span>
+      <span>AMF: <strong id="stats-amf-today">0</strong></span>
+    </div>
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="container">
         <div class="header">
             <h1>Gestion des listes de filtrage</h1>
@@ -191,10 +292,22 @@
             </label>
         </div>
 
+        <div class="list-item">
+            <div class="list-info">
+                <h3>Liste d'exceptions</h3>
+                <p>Domaines à ne jamais signaler (faux positifs, sites légitimes, etc.)</p>
+                <p>Nombre d'éléments: <span id="exceptions-count">0</span></p>
+                <p>Dernière mise à jour: <span id="exceptions-date">-</span></p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="exceptions-toggle" data-list-type="exceptions">
+                <span class="slider"></span>
+            </label>
+        </div>
         
         <div id="status"></div>
     </div>
-
+    <script src="browser-polyfill.min.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>

@@ -1,22 +1,27 @@
 {
-  "manifest_version": 2,
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
   "name": "Alerte sur les sites GenAI, par Next.ink",
-  "version": "2.0.6",
-  "description": "Affiche une alerte sur des sites g\u00e9n\u00e9r\u00e9s tout ou partie par des IA. Liste g\u00e9r\u00e9e par Next.ink",
+  "version": "2.3.1",
+  "description": "Affiche une alerte sur des sites générés tout ou partie par des IA. Liste gérée par Next.ink",
   "permissions": [
     "storage",
     "tabs",
     "activeTab",
-    "https://dl.red.flag.domains/*",
-    "https://next.ink/*",
-    "http://gavois.fr/*",
     "alarms"
   ],
+  "host_permissions": [
+    "https://dl.red.flag.domains/*",
+    "https://next.ink/*"
+  ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "service-worker.js"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "121.0"
+    }
   },
   "content_scripts": [
     {
@@ -24,6 +29,7 @@
         "<all_urls>"
       ],
       "js": [
+        "browser-polyfill.min.js",
         "content.js"
       ],
       "css": [
@@ -31,9 +37,8 @@
       ]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
-    "browser_style": true,
     "default_icon": {
       "16": "icone-app_ia16.png",
       "32": "icone-app_ia32.png",
@@ -46,23 +51,20 @@
     "page": "admin.html",
     "open_in_tab": true
   },
-  "web_accessible_resources": [
-    "bloom-filter.json",
-    "test.txt",
-    "test2.txt",
-    "admin.html"
-  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "bloom-filter.json",
+      "test.txt",
+      "test2.txt",
+      "admin.html"
+    ],
+    "matches": ["<all_urls>"]
+  }],
   "icons": {
     "16": "icone-app_ia16.png",
     "32": "icone-app_ia32.png",
     "48": "icone-app_ia48.png",
     "64": "icone-app_ia64.png",
     "128": "icone-app_ia128.png"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "sebastien@gavois.fr",
-      "strict_min_version": "58.0"
-    }
   }
 }
