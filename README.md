@@ -9,9 +9,9 @@ Au fil des semaines, la liste a continué de s’enrichir, dépassant allégreme
 - [Télécharger et installer notre extension pour Firefox](https://addons.mozilla.org/fr/firefox/addon/alerte-sur-les-sites-genai/)
 - [Télécharger et installer notre extension pour Chrome](https://chromewebstore.google.com/detail/alerte-sur-les-sites-gena/bcmpghnhminmlljeomngepamejbopffc?authuser=0&hl=fr)
 
-- La quasi totalité du code est la même entre Chrome et Firefox, seul le manifest.json est différent. En fonction du navigateur, une manipulation est donc nécessaire : 
-Pour Chrome, renommer manifest-chrome.json en manifest.json
-Pour Firefox,  renommer manifest-firefox.json en manifest.json
+La quasi totalité du code est la même entre Chrome et Firefox, seul le manifest.json est différent. En fonction du navigateur, une manipulation est donc nécessaire : 
+- Pour Chrome, renommer manifest-chrome.json en manifest.json
+- Pour Firefox,  renommer manifest-firefox.json en manifest.json
 
 ## Développé avec une IA et l’aide de plusieurs devs de moji 
 
