@@ -4,22 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
- 
- body {
-  max-width: 700px;
-  min-width: 500px; /* Ajoutez cette ligne */
-  width: 100%;
-  height: auto;
-  /* Enlever toutes les propriétés de hauteur */
-  padding: 15px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  box-sizing: border-box;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+    body {
+      max-width: 750px;
+      min-width: 600px;
+      width: 100%;
+      height: auto;
+      padding: 8px 12px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
     @media (max-width: 500px) {
       body {
@@ -28,80 +26,201 @@
     }
 
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 6px;
     }
 
     label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       font-weight: bold;
+      font-size: 14px;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
-      font-size: 16px; /* Taille minimum recommandée pour mobile */
+      font-size: 14px;
     }
 
     button {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       background-color: #4CAF50;
       color: white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
-      min-height: 44px; /* Taille minimum pour cible tactile */
+      min-height: 40px;
     }
 
     button:hover {
       background-color: #45a049;
     }
 
-    /* Style spécifique pour le tactile */
+    .section-divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2px 0 6px 0;
+    }
+
+    .notice-news {
+      color: #d32f2f;
+    }
+
+    .submit-guideline {
+      font-size: 13px;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+      color: #202124;
+    }
+
+    #openOptionsButton {
+      background-color: #2196F3;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 14px;
+      min-height: 36px;
+    }
+
+    #openOptionsButton:hover {
+      background-color: #0b7dda;
+    }
+
     @media (hover: none) {
       button:hover {
-        background-color: #4CAF50; /* Désactive l'effet hover sur mobile */
+        background-color: #4CAF50;
       }
     }
 
     .success-message {
       color: green;
       display: none;
-      margin-top: 15px;
+      margin-top: 10px;
       text-align: center;
-      padding: 10px;
+      padding: 8px;
+      font-size: 14px;
     }
 
-    /* Style pour la liste */
+    /* Encadré affiché quand l'envoi du signalement échoue: reste visible, donne l'adresse e-mail */
+    .contact-fallback {
+      margin-top: 8px;
+      padding: 8px 10px;
+      background-color: #ffebee;
+      border: 2px solid #f44336;
+      border-radius: 6px;
+      color: #c62828;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .contact-fallback[hidden] {
+      display: none;
+    }
+
+    .contact-fallback strong {
+      display: block;
+    }
+
+    .contact-fallback a {
+      display: block;
+      margin-top: 2px;
+      font-weight: bold;
+      color: #b71c1c;
+      word-break: break-all;
+    }
+
+    /* Bouton "Réessayer" de l'encadré: plus discret que le bouton d'envoi vert */
+    .contact-fallback .contact-retry {
+      width: auto;
+      margin-top: 8px;
+      padding: 6px 14px;
+      min-height: 0;
+      font-size: 13px;
+      background-color: #c62828;
+      color: #ffffff;
+    }
+
+    .contact-fallback .contact-retry:hover {
+      background-color: #b71c1c;
+    }
+
     ul {
       margin: 5px 0;
       padding-left: 20px;
     }
 
-    /* Ajout d'espace pour le scroll */
     .content-wrapper {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    /* Support du mode sombre */
+    #statsInfo {
+      margin: 6px 0;
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .characteristics-section {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .characteristics-section ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+
+    .enquete-link {
+      color: #d32f2f;
+      text-decoration: none;
+    }
+
+    .enquete-link:hover {
+      text-decoration: underline;
+    }
+
+    #errorAlert {
+      display: none;
+      background-color: #ffebee;
+      border: 2px solid #f44336;
+      border-radius: 6px;
+      padding: 12px;
+      margin: 10px 0;
+      color: #c62828;
+      font-size: 14px;
+    }
+
+    #errorAlert strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    #errorAlert ul {
+      margin: 8px 0 0 0;
+      padding-left: 20px;
+    }
+
+    #errorAlert li {
+      margin: 4px 0;
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #202124;
         color: #ffffff;
       }
 
-      input, select {
+      input, select, textarea {
         background-color: #303134;
         color: #ffffff;
         border-color: #5f6368;
-    
       }
 
       button {
@@ -113,57 +232,123 @@
         background-color: #7aa0e4;
       }
 
-      form {
-  margin-bottom: 0;    /* Ajout */
-}
+      #statsInfo {
+        color: #ff6b6b;
+      }
 
-button[type="submit"] {
-  margin-bottom: 0;    /* Ajout */
-}
+      .enquete-link {
+        color: #ff6b6b;
+      }
 
+      #openOptionsButton {
+        background-color: #42a5f5;
+      }
+
+      #openOptionsButton:hover {
+        background-color: #1e88e5;
+      }
+
+      #errorAlert {
+        background-color: #4a2020;
+        border-color: #d32f2f;
+        color: #ffcdd2;
+      }
+
+      .submit-guideline {
+        color: #ffffff;
+      }
+
+      .contact-fallback {
+        background-color: #4a2020;
+        border-color: #ff6b6b;
+        color: #ffcdd2;
+      }
+
+      .contact-fallback a {
+        color: #ffffff;
+      }
+
+      .contact-fallback .contact-retry {
+        background-color: #ff6b6b;
+        color: #202124;
+      }
+
+      .contact-fallback .contact-retry:hover {
+        background-color: #ff8a8a;
+      }
+
+      .notice-news {
+        color: #ff6b6b;
+      }
+
+      .section-divider {
+        border-top-color: #5f6368;
+      }
     }
   </style>
 </head>
 <body>
   <div class="content-wrapper">
-    Les articles & sites (en tout ou partie) générés par IA partagent certaines caractéristiques :<br>
-    <ul>
-      <li>expressions, patterns ou hallucinations typiques des contenus GenAI,</li>
-      <li>signés de journalistes avec une hyperproductivité inhumaine,</li>
-      <li>traductions et/ou paraphrases d'autres articles (sans les mentionner),</li>
-      <li>images générées par IA ne correspondant pas aux critères journalistiques,</li>
-      <li>alignent des poncifs lénifiants ou moralisants plutôt que des faits,</li>
-      <li>publiés sur un site sans mention légale (ou fictive) ni directeur de publication,</li>
-      <li>usurpent la réputation de « noms de domaine expirés »,</li>
-    </ul>
-    <p style="margin: 15px 0;"><a href="https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/">Lire notre enquête sur Next.ink</a></p>
-    <form id="reportForm">
-      <div class="form-group">
-        <label for="siteUrl">Signalez-nous un site d'un clic, via ce formulaire</label>
-        <input type="url" id="siteUrl" required>
-      </div>
-      <div class="form-group">
-        <label for="category">Catégorie</label>
-        <select id="category">
-          <option value="">Sélectionnez une catégorie</option>
-          <option value="genai">Site généré par IA</option>
-          <option value="scam">Site frauduleux</option>
-          <option value="misinformation">Désinformation</option>
-          <option value="other">Autre</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="description">Description (optionnelle)</label>
-        <textarea id="description" rows="3"></textarea>
-      </div>
-      <div class="form-group"></div>
-      <button type="submit">Signaler ce site</button>  <!-- Plus de form-group superflu -->
+    <button id="openOptionsButton" data-i18n="popup.open_settings_button">⚙️ Ouvrir les paramètres de l'extension</button>
+
+    <div id="errorAlert">
+      <strong data-i18n="popup.sync_error_title">⚠️ Problème de synchronisation</strong>
+      <p data-i18n="popup.sync_error_body">Impossible de mettre à jour les listes suivantes :</p>
+      <ul id="errorList"></ul>
+      <p style="margin-top: 8px;" data-i18n="popup.sync_error_hint">Cliquez sur "Ouvrir les paramètres" pour plus d'informations et réessayer.</p>
     </div>
-    </form>
-    <div id="successMessage" class="success-message">
-      Site signalé avec succès !
+
+    <p id="statsInfo" data-i18n="popup.stats_loading">
+      Chargement des statistiques...
+    </p>
+    <div class="characteristics-section">
+      <span data-i18n="popup.characteristics_title">Les articles & sites (en tout ou partie) générés par IA partagent certaines caractéristiques :</span><br>
+      <ul>
+        <li data-i18n="popup.characteristics.0">expressions, patterns ou hallucinations typiques des contenus GenAI,</li>
+        <li data-i18n="popup.characteristics.1">signés de journalistes avec une hyperproductivité inhumaine,</li>
+        <li data-i18n="popup.characteristics.2">traductions et/ou paraphrases d'autres articles (sans les mentionner),</li>
+        <li data-i18n="popup.characteristics.3">images générées par IA ne correspondant pas aux critères journalistiques,</li>
+        <li data-i18n="popup.characteristics.4">alignent des poncifs lénifiants ou moralisants plutôt que des faits,</li>
+        <li data-i18n="popup.characteristics.5">publiés sur un site sans mention légale (ou fictive) ni directeur de publication,</li>
+        <li data-i18n="popup.characteristics.6">usurpent la réputation de « noms de domaine expirés »,</li>
+        <li data-i18n="popup.characteristics.7">recopient/collent les mêmes articles/informations sur de nombreux sites/clones "copycat",</li>
+      </ul>
     </div>
+    <p style="margin: 6px 0 2px 0; font-size: 15px; text-align: center; font-weight: bold;"><a href="https://next.ink/173214/recap-nous-avons-decouvert-des-milliers-de-sites-dinfo-generes-par-ia-tous-nos-articles/" class="enquete-link" id="enqueteLink" data-i18n="popup.enquete_link">Lire notre enquête sur Next.ink</a></p>
   </div>
+  <hr class="section-divider">
+
+  <form id="reportForm">
+    <div id="reportFields">
+    <p class="submit-guideline"><span class="notice-news" data-i18n="popup.report_form.news_only_notice">Merci de ne signaler que les sites d'informations</span> <span data-i18n="popup.report_form.submit_guideline">dont les articles vous semblent avoir été générés par IA, susceptibles de contenir des informations « hallucinées », et de ne pas nous signaler les sites &amp; boutiques simplement « vibe-codés », ou faisant la promo de leurs propres produits &amp; services avec des textes GenAI.</span></p>
+    <div class="form-group">
+      <label for="siteUrl" data-i18n="popup.report_form.url_label">Signalez-nous un site d'un clic, via ce formulaire</label>
+      <input type="url" id="siteUrl" required>
+    </div>
+    <div class="form-group">
+      <label for="description" data-i18n="popup.report_form.description_label">Motif(s) de signalement</label>
+      <textarea id="description" rows="2" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="email" data-i18n="popup.report_form.email_label">Email pour vous répondre si besoin (optionnel)</label>
+      <input type="email" id="email" data-i18n-placeholder="popup.report_form.email_placeholder" placeholder="votre@email.com">
+    </div>
+    <button type="submit" data-i18n="popup.report_form.submit_button">Signalez-nous ce site d'un clic (ou par email à genai@next.ink)</button>
+    </div>
+    <div id="contactFallback" class="contact-fallback" role="alert" hidden>
+      <strong data-i18n="popup.report_form.contact_title">Le système de signalement rencontre des soucis.</strong>
+      <span data-i18n="popup.report_form.contact_body">Votre signalement n'a pas pu être envoyé. Vous pouvez nous contacter par email à l'adresse suivante :</span>
+      <a id="contactMailLink" href="mailto:genai@next.ink" target="_blank" rel="noopener">genai@next.ink</a>
+      <button type="button" id="contactRetry" class="contact-retry" data-i18n="popup.report_form.contact_retry">Réessayer l'envoi</button>
+    </div>
+  </form>
+
+  <div id="successMessage" class="success-message" data-i18n="popup.report_form.submit_success">
+    Site signalé avec succès !
+  </div>
+  
+  <script src="browser-polyfill.min.js"></script>
+  <script src="i18n.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "_comment": "Liste des langues disponibles. Pour ajouter une langue : créer locales/<code>.json puis ajouter une entrée ici. 'default' est la langue de repli ultime.",
+  "default": "en",
+  "languages": [
+    {
+      "code": "fr",
+      "label": "FR",
+      "name": "Français"
+    },
+    {
+      "code": "en",
+      "label": "EN",
+      "name": "English"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "_meta": {
+    "code": "fr",
+    "name": "Français",
+    "comment": "Fichier de langue de l'extension Next.ink - Alerte GenAI. Les variables sont notées {variable}. Pour ajouter une langue : copier ce fichier, le traduire, puis l'ajouter dans locales/index.json."
+  },
+  "manifest": {
+    "name": "Alerte sur les sites GenAI, par Next.ink",
+    "description": "Affiche une alerte sur des sites générés tout ou partie par des IA et détecte les attaques IDN homographes. Liste gérée par Next.ink"
+  },
+  "popup": {
+    "open_settings_button": "⚙️ Ouvrir les paramètres de l'extension",
+    "sync_error_title": "⚠️ Problème de synchronisation",
+    "sync_error_body": "Impossible de mettre à jour les listes suivantes :",
+    "sync_error_hint": "Cliquez sur \"Ouvrir les paramètres\" pour plus d'informations et réessayer.",
+    "stats_loading": "Chargement des statistiques...",
+    "stats_loading_error": "Impossible de charger les statistiques.",
+    "stats_text": "Il y a actuellement {genai} sites dans notre liste GenAI, dont {fr} en français.",
+    "stats_text_total_only": "Il y a actuellement {genai} sites dans notre liste GenAI.",
+    "characteristics_title": "Les articles & sites (en tout ou partie) générés par IA partagent certaines caractéristiques :",
+    "characteristics": [
+      "expressions, patterns ou hallucinations typiques des contenus GenAI,",
+      "signés de journalistes avec une hyperproductivité inhumaine,",
+      "traductions et/ou paraphrases d'autres articles (sans les mentionner),",
+      "images générées par IA ne correspondant pas aux critères journalistiques,",
+      "alignent des poncifs lénifiants ou moralisants plutôt que des faits,",
+      "publiés sur un site sans mention légale (ou fictive) ni directeur de publication,",
+      "usurpent la réputation de « noms de domaine expirés »,",
+      "recopient/collent les mêmes articles/informations sur de nombreux sites/clones \"copycat\""
+    ],
+    "enquete_link": "Lire notre enquête sur Next.ink",
+    "report_form": {
+      "url_label": "Signalez-nous un site d'un clic, via ce formulaire",
+      "email_label": "Email pour vous répondre si besoin (optionnel)",
+      "email_placeholder": "votre@email.com",
+      "description_label": "Motif(s) de signalement",
+      "error_reason_required": "Merci d'indiquer le ou les motifs de votre signalement.",
+      "news_only_notice": "Merci de ne signaler que les sites d'informations",
+      "submit_guideline": "dont les articles vous semblent avoir été générés par IA, susceptibles de contenir des informations « hallucinées », et de ne pas nous signaler les sites & boutiques simplement « vibe-codés », ou faisant la promo de leurs propres produits & services avec des textes GenAI.",
+      "submit_button": "Signalez-nous ce site d'un clic (ou par email à genai@next.ink)",
+      "submit_sending": "Envoi en cours...",
+      "submit_success": "Site signalé avec succès !",
+      "error_network": "Une erreur est survenue. Vérifiez votre connexion Internet.",
+      "error_server": "Une erreur est survenue. Impossible de contacter le serveur.",
+      "error_generic": "Une erreur est survenue. {message}",
+      "contact_title": "Le système de signalement rencontre des soucis.",
+      "contact_body": "Votre signalement n'a pas pu être envoyé. Vous pouvez nous contacter par email à l'adresse suivante :",
+      "contact_link": "Envoyer par email",
+      "mail_subject": "Signalement d'un site (GenAI)",
+      "mail_body_intro": "Bonjour, le formulaire de signalement de l'extension ne fonctionne pas. Voici mon signalement :",
+      "mail_body_url": "Site : {url}",
+      "mail_body_reason": "Motif(s) : {reason}",
+      "contact_retry": "Réessayer l'envoi"
+    },
+    "list_names": {
+      "genai": "Médias GenAI (Bloom Filter)",
+      "redflag": "Red Flag Domains",
+      "amf": "AMF",
+      "dgccrf": "DGCCRF",
+      "exceptions": "Exceptions"
+    },
+    "sizes": {
+      "elements": "{count} éléments",
+      "metadata_unavailable": "Métadonnées non disponibles",
+      "not_loaded": "Non chargé"
+    },
+    "error_timeout": "La requête a pris trop de temps"
+  },
+  "admin": {
+    "page_title": "Gestion des Listes - Next.ink",
+    "stats_section_title": "Statistiques des alertes",
+    "stats_today": "Aujourd'hui",
+    "stats_week": "Cette semaine",
+    "stats_month": "Ce mois",
+    "stats_total": "Total",
+    "stats_breakdown_title": "Répartition par catégorie (aujourd'hui)",
+    "stats_category_genai": "GenAI",
+    "stats_category_redflag": "RedFlag",
+    "stats_category_amf": "AMF",
+    "stats_category_dgccrf": "DGCCRF",
+    "stats_category_idn": "IDN Homographes",
+    "lists_section_title": "Gestion des listes de filtrage",
+    "lists_section_subtitle": "Activez ou désactivez les différentes listes de filtrage",
+    "update_errors_title": "❌ Erreurs de mise à jour",
+    "error_report_intro": "Vous pouvez nous signaler ce problème :",
+    "error_report_email_placeholder": "votre@email.com (optionnel)",
+    "error_report_send_button": "Envoyer le rapport d'erreur",
+    "error_report_send_sending": "Envoi en cours...",
+    "error_report_send_success": "Rapport envoyé avec succès ! Merci pour votre aide.",
+    "error_report_send_error": "Erreur lors de l'envoi : {message}",
+    "error_report_show_button": "Signaler mon problème",
+    "error_report_hide_button": "Masquer le formulaire",
+    "update_lists_button": "Mettre à jour les listes",
+    "list_count_label": "Nombre d'éléments:",
+    "list_date_label": "Dernière mise à jour:",
+    "list_date_never": "Jamais mise à jour",
+    "list_date_none": "-",
+    "list_last_global_update": "Dernière mise à jour globale : {date}",
+    "list_no_global_update": "Aucune mise à jour globale effectuée",
+    "list_count_error": "Erreur de calcul",
+    "list_size_no_metadata": "{size} ko (métadonnées non disponibles)",
+    "list_created_on": "Liste créée le {date}",
+    "list_enabled": "Liste {type} activée",
+    "list_disabled": "Liste {type} désactivée",
+    "list_toggle_error": "Erreur lors de la modification de la liste {type}",
+    "list_comm_error": "Erreur de communication: {message}",
+    "list_load_error": "Erreur de chargement des états",
+    "list_update_running": "Mise à jour des listes en cours...",
+    "list_update_done": "Mise à jour des listes terminée",
+    "list_update_error": "Erreur lors de la mise à jour des listes",
+    "lists": {
+      "genai": {
+        "title": "Médias GenAI",
+        "description": "Détecte les sites tout ou partie générés par intelligence artificielle."
+      },
+      "bloom_en": {
+        "title": "Média GenAI anglais",
+        "description": "Détecte les sites tout ou partie générés par intelligence artificielle (liste anglophone)."
+      },
+      "redflag": {
+        "title": "Red Flag Domains",
+        "description": "Récupère la liste des domaines identifiés par Red Flag Domains"
+      },
+      "amf": {
+        "title": "Listes noires de l'Autorité des marchés financiers",
+        "description": "Sociétés et sites non autorisés par l'AMF"
+      },
+      "dgccrf": {
+        "title": "Liste de réquisition numérique de la DGCCRF",
+        "description": "Sites signalés par la DGCCRF"
+      },
+      "exceptions": {
+        "title": "Liste d'exceptions",
+        "description": "Domaines à ne jamais signaler (faux positifs, sites légitimes, etc.)"
+      },
+      "idn_homograph": {
+        "title": "Détection d'homographes IDN",
+        "description": "Détecte les attaques par homographes IDN (caractères ressemblant visuellement aux caractères latins).",
+        "count_local": "Détection locale"
+      }
+    },
+    "ignored_sites_title": "Sites ignorés par catégorie",
+    "ignored_sites_subtitle": "Domaines pour lesquels vous avez désactivé les alertes",
+    "ignored_sites_clear_button": "Effacer tous les sites ignorés",
+    "ignored_sites_confirm_clear": "Êtes-vous sûr de vouloir effacer tous les sites ignorés ?",
+    "ignored_sites_empty": "Aucun site ignoré pour le moment",
+    "ignored_sites_remove": "Supprimer",
+    "ignored_sites_show_all": "Afficher tous les {count} sites",
+    "learn_more": "En savoir plus",
+    "ignored_categories": {
+      "genai": "Sites IA",
+      "redflag": "Red Flag",
+      "amf": "AMF",
+      "idn_homograph": "IDN Homographes"
+    }
+  },
+  "notification": {
+    "idn_suspicious_chars_title": "Caractères suspects détectés :",
+    "idn_char_detail": "• Le site utilise un {char} ({script}, Unicode {unicode}) et pas un {latinEquivalent} de l'alphabet latin",
+    "idn_domain_info": "Ce domaine utilise des caractères internationalisés (IDN) : {chars}",
+    "idn_char_info": "• Caractère {char} (Unicode {unicode})",
+    "more_info_button": "Plus d'infos",
+    "no_alert_checkbox": "Ne plus m'alerter sur ce site pour toutes les catégories",
+    "close_button": "Fermer",
+    "security_alert_title": "Alerte de sécurité",
+    "security_alert_blocked": "Ce site tente de bloquer les avertissements de sécurité.",
+    "security_alert_watchlist": "Attention: ce site figure dans une ou plusieurs listes de surveillance."
+  },
+  "alert_messages": {
+    "genai": "Ce site figure dans la liste francophone de médias GenAI de Next.ink.<br><br>Le règlement européen sur l'intelligence artificielle (AI Act) oblige les contenus « synthétiques » à être identifiables comme ayant été générés ou manipulés par IA.<br><br>Or, d'après les constatations (humaines) de Next.ink, la majeure partie des articles de ce site semble avoir été générée par IA (GenAI), mais sans le préciser.<br><br>Pour en savoir plus sur notre méthodologie, le nombre de sites flaggués, nous signaler d'autres sites GenAI, voire de « faux positifs » identifiés à tort, cliquez sur le bouton de l'extension.",
+    "bloom_en": "Ce site figure dans la liste anglophone de médias GenAI de Next.ink.<br><br>Le règlement européen sur l'intelligence artificielle (AI Act) oblige les contenus « synthétiques » à être identifiables comme ayant été générés ou manipulés par IA.<br><br>Or, d'après les constatations (humaines) de Next.ink, la majeure partie des articles de ce site semble avoir été générée par IA (GenAI), mais sans le préciser.<br><br>Pour en savoir plus sur notre méthodologie, le nombre de sites flaggués, nous signaler d'autres sites GenAI, voire de « faux positifs » identifiés à tort, cliquez sur le bouton de l'extension.",
+    "redflag": "Attention : ce site est dans la base de données de Red Flag Domains, une initiative qui référence des noms de domaine potentiellement malveillants.",
+    "amf": "Attention : ce site est dans la liste noire des sociétés et sites non autorisés par l'Autorité des marchés financiers.",
+    "dgccrf": "Attention : ce site figure dans la liste de réquisition numérique de la DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes).",
+    "idn_homograph": "Attention : ce site utilise des caractères IDN et peut potentiellement être malveillant avec une attaque de type homographe.<br><br>Il utilise dans son nom de domaine au moins un homoglyphe, c'est-à-dire un caractére qui ressemble beaucoup à un autre.<br><br>L'usage peut-être légitime avec un caractère accentué (réussir-en.fr de l'Afnic par exemple) mais aussi malveillant. Dans tous les cas, soyez prudent et vérifiez bien sur quel site vous êtes.<br><br>En cas de faux positif cliquez sur l'icône de l'extension pour nous le signaler."
+  },
+  "service_worker": {
+    "missing_filter_genai": "Médias GenAI (Bloom Filter)",
+    "missing_filter_genai_error": "Médias GenAI (Bloom Filter) - échec de mise à jour",
+    "missing_filter_redflag": "Red Flag Domains",
+    "missing_filter_redflag_error": "Red Flag Domains - échec de mise à jour",
+    "missing_filter_amf": "Liste noire AMF",
+    "missing_filter_amf_error": "Liste noire AMF - échec de mise à jour",
+    "missing_filter_obsolete": "Listes obsolètes (dernière mise à jour il y a plus de 7 jours)",
+    "missing_filters_notification": "Attention : {count} liste(s) de filtrage non chargée(s) :\n{lists}.\n\nCliquez sur l'icône de l'extension pour mettre à jour.",
+    "outdated_lists_notification": "Attention : Vos listes n'ont pas été mises à jour depuis plus d'une semaine.\n\nCliquez sur l'icône de l'extension pour mettre à jour.",
+    "notification_title_missing_filters": "Extension Next.ink - Filtres non chargés",
+    "notification_title_outdated": "Extension Next.ink - Listes obsolètes"
+  },
+  "errors": {
+    "form_elements_missing": "Éléments du formulaire non trouvés",
+    "http_error": "Erreur HTTP : {status}",
+    "offline": "Pas de connexion Internet"
+  }
+}

@@ -19,39 +19,46 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: var(--background-color);
-            line-height: 1.6;
+            line-height: 1.45;
             color: var(--primary-color);
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 12px;
         }
 
         .container {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+            padding: 16px 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 6px;
         }
 
         .header h1 {
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 2px;
+            font-size: 1.25em;
+        }
+
+        .header h2 {
+            margin-bottom: 2px;
         }
 
         .header p {
             color: #666;
+            font-size: 0.9em;
+            line-height: 1.35;
         }
 
         .list-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px;
+            padding: 10px 12px;
             border-bottom: 1px solid #eee;
             transition: background-color 0.3s ease;
         }
@@ -62,25 +69,39 @@
 
         .list-info {
             flex-grow: 1;
-            margin-right: 20px;
+            margin-right: 14px;
+            line-height: 1.4;
         }
 
         .list-info h3 {
             color: var(--primary-color);
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+            font-size: 1em;
         }
 
         .list-info p {
             color: #666;
-            font-size: 0.9em;
+            font-size: 0.85em;
+        }
+
+        /* Nombre d'éléments et date de mise à jour sur une seule ligne */
+        .list-info p.list-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 16px;
+        }
+
+        .list-info p.list-meta span.meta-item {
+            white-space: nowrap;
         }
 
         /* Slider Switch Styling */
         .switch {
             position: relative;
             display: inline-block;
-            width: 60px;
-            height: 34px;
+            width: 44px;
+            height: 24px;
+            flex-shrink: 0;
         }
 
         .switch input {
@@ -98,16 +119,16 @@
             bottom: 0;
             background-color: #ccc;
             transition: .4s;
-            border-radius: 34px;
+            border-radius: 24px;
         }
 
         .slider:before {
             position: absolute;
             content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
             background-color: white;
             transition: .4s;
             border-radius: 50%;
@@ -118,7 +139,22 @@
         }
 
         input:checked + .slider:before {
-            transform: translateX(26px);
+            transform: translateX(20px);
+        }
+
+        #update-lists {
+            margin-top: 6px;
+            padding: 5px 14px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+
+        #update-lists:hover {
+            opacity: 0.9;
         }
 
         #status {
@@ -140,36 +176,338 @@
             color: #a94442;
             display: block;
         }
+
+
+
+
+
+
+
+
+
+
+        .stats-section {
+  margin: 12px 0;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.stats-section h2 {
+  font-size: 1.15em;
+  margin: 0 0 8px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 8px 0 10px 0;
+}
+
+@media (max-width: 560px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-card {
+  background: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  margin: 0 0 2px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.stat-card span {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.category-breakdown h3 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+.category-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 13px;
+}
+
+.ignored-sites-section {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 2px solid #eee;
+}
+
+.ignored-sites-section .header h2 {
+  font-size: 1.15em;
+}
+
+/* Sites ignorés: une pastille par domaine */
+.category-section {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid var(--cat, #999);
+}
+
+.category-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px 0;
+  font-size: 0.95em;
+  color: var(--cat, #666);
+}
+
+.category-count {
+  background: var(--cat, #999);
+  color: white;
+  padding: 0 7px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.domains-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.domains-list[hidden] {
+  display: none;
+}
+
+.all-domains {
+  margin-top: 6px;
+}
+
+.domain-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px 2px 10px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  font-size: 0.85em;
+  color: #333;
+}
+
+.domain-name {
+  word-break: break-all;
+}
+
+.remove-domain-btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #dc3545;
+  color: white;
+  font-size: 11px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.remove-domain-btn:hover {
+  background: #c82333;
+}
+
+.show-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 4px;
+  background: var(--cat, #999);
+  color: white;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.show-all-btn:hover {
+  opacity: 0.85;
+}
+
+.ignored-empty {
+  text-align: center;
+  color: #666;
+  padding: 8px;
+  font-size: 0.9em;
+}
+
+#clear-ignored-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#clear-ignored-btn:hover {
+  background-color: #c82333;
+}
+
+
+
+
+
+    .lang-switcher {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        display: flex;
+        gap: 4px;
+        z-index: 1000;
+    }
+    .lang-btn {
+        padding: 4px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: white;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        color: #666;
+    }
+    .lang-btn.active {
+        background-color: var(--secondary-color);
+        color: white;
+        border-color: var(--secondary-color);
+    }
     </style>
 </head>
 <body>
+    
+    
+    
+    
+    
+    
+    <div class="lang-switcher" id="lang-switcher"></div>
+
+<!-- Section statistiques -->
+<div class="stats-section">
+  <h2 data-i18n="admin.stats_section_title">Statistiques des alertes</h2>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3 data-i18n="admin.stats_today">Aujourd'hui</h3>
+      <span id="stats-today">0</span>
+    </div>
+    <div class="stat-card">
+      <h3 data-i18n="admin.stats_week">Cette semaine</h3>
+      <span id="stats-week">0</span>
+    </div>
+    <div class="stat-card">
+      <h3 data-i18n="admin.stats_month">Ce mois</h3>
+      <span id="stats-month">0</span>
+    </div>
+    <div class="stat-card">
+      <h3 data-i18n="admin.stats_total">Total</h3>
+      <span id="stats-total">0</span>
+    </div>
+  </div>
+
+  <div class="category-breakdown">
+    <h3 data-i18n="admin.stats_breakdown_title">Répartition par catégorie (aujourd'hui)</h3>
+    <div class="category-stats">
+      <span><span data-i18n="admin.stats_category_genai">GenAI</span>: <strong id="stats-genai-today">0</strong></span>
+      <span><span data-i18n="admin.stats_category_redflag">RedFlag</span>: <strong id="stats-redflag-today">0</strong></span>
+      <span><span data-i18n="admin.stats_category_amf">AMF</span>: <strong id="stats-amf-today">0</strong></span>
+      <span><span data-i18n="admin.stats_category_dgccrf">DGCCRF</span>: <strong id="stats-dgccrf-today">0</strong></span>
+      <span><span data-i18n="admin.stats_category_idn">IDN Homographes</span>: <strong id="stats-idn_homograph-today">0</strong></span>
+    </div>
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="container">
         <div class="header">
-            <h1>Gestion des listes de filtrage</h1>
-            <p>Activez ou désactivez les différentes listes de filtrage</p>
+            <h1 data-i18n="admin.lists_section_title">Gestion des listes de filtrage</h1>
+            <p data-i18n="admin.lists_section_subtitle">Activez ou désactivez les différentes listes de filtrage</p>
             <p id="last-update-time" style="font-size: 0.8em; color: #666;"></p>
-            <button id="update-lists">Mettre à jour les listes</button>
+
+            <!-- Alerte pour les erreurs de mise à jour -->
+            <div id="update-errors-alert" style="display: none; background-color: #f8d7da; border: 2px solid #dc3545; border-radius: 8px; padding: 15px; margin: 15px 0; color: #721c24;">
+                <strong data-i18n="admin.update_errors_title">❌ Erreurs de mise à jour</strong>
+                <div id="update-errors-list" style="margin: 10px 0 0 0;"></div>
+
+                <!-- Formulaire de signalement d'erreur -->
+                <div id="error-report-form" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #dc3545;">
+                    <p style="margin-bottom: 10px;" data-i18n="admin.error_report_intro">Vous pouvez nous signaler ce problème :</p>
+                    <input type="email" id="error-report-email" data-i18n-placeholder="admin.error_report_email_placeholder" placeholder="votre@email.com (optionnel)" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    <button id="send-error-report" data-i18n="admin.error_report_send_button" style="width: 100%; padding: 10px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Envoyer le rapport d'erreur</button>
+                    <div id="error-report-status" style="margin-top: 10px; padding: 8px; border-radius: 4px; display: none;"></div>
+                </div>
+
+                <button id="show-error-report-form" data-i18n="admin.error_report_show_button" style="width: 100%; margin-top: 10px; padding: 8px; background-color: #721c24; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Signaler mon problème</button>
+            </div>
+
+            <button id="update-lists" data-i18n="admin.update_lists_button">Mettre à jour les listes</button>
         </div>
 
         <div class="list-item">
             <div class="list-info">
-                <h3>Médias GenAI</h3>
-                <p>Détecte les sites tout ou partie générés par intelligence artificielle.<a target="_blank" href="https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/">Liste Next.ink</a></p>
-                <p>Taille du fichier: <span id="genai-count">0</span></p>
-                <p>Dernière mise à jour: <span id="genai-date">-</span></p>
+                <h3 data-i18n="admin.lists.genai.title">Médias GenAI</h3>
+                <p><span data-i18n="admin.lists.genai.description">Détecte les sites tout ou partie générés par intelligence artificielle.</span> <a target="_blank" href="https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/">Liste Next.ink</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="genai-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="genai-date">-</span></span></p>
+                <p id="genai-metadata" style="font-size: 0.85em; color: #888; margin-top: 5px; display: none;"></p>
             </div>
             <label class="switch">
                 <input type="checkbox" id="genai-toggle" data-list-type="genai">
                 <span class="slider"></span>
             </label>
         </div>
-        
+
         <div class="list-item">
             <div class="list-info">
-                <h3>Red Flag Domains</h3>
-                <p>Récupére la liste des domaines identifiés par <a target="_blank" href="https://red.flag.domains/">Red Flag Domains</a></p>
-                <p>Nombre d'éléments: <span id="redflag-count">0</span></p>
-                <p>Dernière mise à jour: <span id="redflag-date">-</span></p>
+                <h3 data-i18n="admin.lists.bloom_en.title">Média GenAI anglais</h3>
+                <p><span data-i18n="admin.lists.bloom_en.description">Détecte les sites tout ou partie générés par intelligence artificielle (liste anglophone).</span> <a target="_blank" href="https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/">Liste Next.ink</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="bloom_en-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="bloom_en-date">-</span></span></p>
+                <p id="bloom_en-metadata" style="font-size: 0.85em; color: #888; margin-top: 5px; display: none;"></p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="bloom_en-toggle" data-list-type="bloom_en">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="list-item">
+            <div class="list-info">
+                <h3 data-i18n="admin.lists.redflag.title">Red Flag Domains</h3>
+                <p><span data-i18n="admin.lists.redflag.description">Récupère la liste des domaines identifiés par</span> <a target="_blank" href="https://red.flag.domains/">Red Flag Domains</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="redflag-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="redflag-date">-</span></span></p>
             </div>
             <label class="switch">
                 <input type="checkbox" id="redflag-toggle" data-list-type="redflag">
@@ -177,13 +515,11 @@
             </label>
         </div>
 
-        
         <div class="list-item">
             <div class="list-info">
-                <h3>Listes noires de l'Autorité des marchés financiers</h3>
-                <p>Sociétés et sites non autorisés par <a target="_blank" href="https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-noires-et-mises-en-garde">AMF</a></p>
-                <p>Nombre d'éléments: <span id="amf-count">0</span></p>
-                <p>Dernière mise à jour: <span id="amf-date">-</span></p>
+                <h3 data-i18n="admin.lists.amf.title">Listes noires de l'Autorité des marchés financiers</h3>
+                <p><span data-i18n="admin.lists.amf.description">Sociétés et sites non autorisés par</span> <a target="_blank" href="https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-noires-et-mises-en-garde">AMF</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="amf-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="amf-date">-</span></span></p>
             </div>
             <label class="switch">
                 <input type="checkbox" id="amf-toggle" data-list-type="amf">
@@ -191,10 +527,63 @@
             </label>
         </div>
 
-        
+        <div class="list-item">
+            <div class="list-info">
+                <h3 data-i18n="admin.lists.dgccrf.title">Liste de réquisition numérique de la DGCCRF</h3>
+                <p><span data-i18n="admin.lists.dgccrf.description">Sites signalés par la</span> <a target="_blank" href="https://www.economie.gouv.fr/dgccrf/laction-de-la-dgccrf/injonctions-et-sanctions">Direction générale de la concurrence, de la consommation et de la répression des fraudes</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="dgccrf-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="dgccrf-date">-</span></span></p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="dgccrf-toggle" data-list-type="dgccrf">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="list-item">
+            <div class="list-info">
+                <h3 data-i18n="admin.lists.exceptions.title">Liste d'exceptions</h3>
+                <p data-i18n="admin.lists.exceptions.description">Domaines à ne jamais signaler (faux positifs, sites légitimes, etc.)</p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="exceptions-count">0</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="exceptions-date">-</span></span></p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="exceptions-toggle" data-list-type="exceptions">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="list-item">
+            <div class="list-info">
+                <h3 data-i18n="admin.lists.idn_homograph.title">Détection d'homographes IDN</h3>
+                <p><span data-i18n="admin.lists.idn_homograph.description">Détecte les attaques par homographes IDN (caractères ressemblant visuellement aux caractères latins).</span> <a target="_blank" href="https://fr.wikipedia.org/wiki/Attaque_homographe_IDN" data-i18n="admin.learn_more">En savoir plus</a></p>
+                <p class="list-meta"><span class="meta-item"><span data-i18n="admin.list_count_label">Nombre d'éléments:</span> <span id="idn_homograph-count" data-i18n="admin.lists.idn_homograph.count_local">Détection locale</span></span><span class="meta-item"><span data-i18n="admin.list_date_label">Dernière mise à jour:</span> <span id="idn_homograph-date">-</span></span></p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="idn_homograph-toggle" data-list-type="idn_homograph">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="ignored-sites-section">
+            <div class="header">
+                <h2 data-i18n="admin.ignored_sites_title">Sites ignorés par catégorie</h2>
+                <p data-i18n="admin.ignored_sites_subtitle">Domaines pour lesquels vous avez désactivé les alertes</p>
+            </div>
+
+            <div id="ignored-sites-container">
+                <!-- Les sites ignorés seront affichés ici -->
+            </div>
+
+            <div style="margin-top: 8px; text-align: center;">
+                <button id="clear-ignored-btn">
+                    <span data-i18n="admin.ignored_sites_clear_button">Effacer tous les sites ignorés</span>
+                </button>
+            </div>
+        </div>
+
         <div id="status"></div>
     </div>
-
+    <script src="browser-polyfill.min.js"></script>
+    <script src="i18n.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>

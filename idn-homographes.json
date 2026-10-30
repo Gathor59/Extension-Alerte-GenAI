@@ -1,0 +1,1024 @@
+{
+  "description": "Caractères homographes IDN utilisés dans les attaques de phishing",
+  "version": "1.1",
+  "homographs": {
+    "a": {
+      "latin": "a",
+      "confusables": [
+        {
+          "char": "а",
+          "unicode": "U+0430",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ạ",
+          "unicode": "U+1EA1",
+          "script": "Latin étendu (vietnamien)"
+        },
+        {
+          "char": "ａ",
+          "unicode": "U+FF41",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "α",
+          "unicode": "U+03B1",
+          "script": "Grec"
+        },
+        {
+          "char": "ꭰ",
+          "unicode": "U+AB70",
+          "script": "Cherokee"
+        },
+        {
+          "char": "ა",
+          "unicode": "U+10D0",
+          "script": "Géorgien"
+        },
+        {
+          "char": "า",
+          "unicode": "U+0E32",
+          "script": "Thaï"
+        }
+      ]
+    },
+    "b": {
+      "latin": "b",
+      "confusables": [
+        {
+          "char": "Ь",
+          "unicode": "U+042C",
+          "script": "Cyrillique (signe mou majuscule)"
+        },
+        {
+          "char": "ｂ",
+          "unicode": "U+FF42",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "c": {
+      "latin": "c",
+      "confusables": [
+        {
+          "char": "с",
+          "unicode": "U+0441",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ϲ",
+          "unicode": "U+03F2",
+          "script": "Grec (symbole lunaire)"
+        },
+        {
+          "char": "ｃ",
+          "unicode": "U+FF43",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "d": {
+      "latin": "d",
+      "confusables": [
+        {
+          "char": "ԁ",
+          "unicode": "U+0501",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｄ",
+          "unicode": "U+FF44",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "e": {
+      "latin": "e",
+      "confusables": [
+        {
+          "char": "е",
+          "unicode": "U+0435",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ė",
+          "unicode": "U+0117",
+          "script": "Latin étendu"
+        },
+        {
+          "char": "ｅ",
+          "unicode": "U+FF45",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "ε",
+          "unicode": "U+03B5",
+          "script": "Grec"
+        }
+      ]
+    },
+    "f": {
+      "latin": "f",
+      "confusables": [
+        {
+          "char": "ｆ",
+          "unicode": "U+FF46",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "g": {
+      "latin": "g",
+      "confusables": [
+        {
+          "char": "ɡ",
+          "unicode": "U+0261",
+          "script": "Latin API"
+        },
+        {
+          "char": "ｇ",
+          "unicode": "U+FF47",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "h": {
+      "latin": "h",
+      "confusables": [
+        {
+          "char": "һ",
+          "unicode": "U+04BB",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｈ",
+          "unicode": "U+FF48",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "i": {
+      "latin": "i",
+      "confusables": [
+        {
+          "char": "і",
+          "unicode": "U+0456",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ı",
+          "unicode": "U+0131",
+          "script": "Latin (turc)"
+        },
+        {
+          "char": "ｉ",
+          "unicode": "U+FF49",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "ι",
+          "unicode": "U+03B9",
+          "script": "Grec"
+        }
+      ]
+    },
+    "j": {
+      "latin": "j",
+      "confusables": [
+        {
+          "char": "ј",
+          "unicode": "U+0458",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｊ",
+          "unicode": "U+FF4A",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "k": {
+      "latin": "k",
+      "confusables": [
+        {
+          "char": "κ",
+          "unicode": "U+03BA",
+          "script": "Grec"
+        },
+        {
+          "char": "ｋ",
+          "unicode": "U+FF4B",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "l": {
+      "latin": "l",
+      "confusables": [
+        {
+          "char": "ӏ",
+          "unicode": "U+04CF",
+          "script": "Cyrillique (palochka)"
+        },
+        {
+          "char": "Ι",
+          "unicode": "U+0399",
+          "script": "Grec (iota majuscule)"
+        },
+        {
+          "char": "ǀ",
+          "unicode": "U+01C0",
+          "script": "Latin étendu"
+        },
+        {
+          "char": "ｌ",
+          "unicode": "U+FF4C",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "|",
+          "unicode": "U+007C",
+          "script": "ASCII (barre verticale)"
+        }
+      ]
+    },
+    "m": {
+      "latin": "m",
+      "confusables": [
+        {
+          "char": "м",
+          "unicode": "U+043C",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｍ",
+          "unicode": "U+FF4D",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "n": {
+      "latin": "n",
+      "confusables": [
+        {
+          "char": "ո",
+          "unicode": "U+0578",
+          "script": "Arménien"
+        },
+        {
+          "char": "ｎ",
+          "unicode": "U+FF4E",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "ნ",
+          "unicode": "U+10DC",
+          "script": "Géorgien"
+        }
+      ]
+    },
+    "o": {
+      "latin": "o",
+      "confusables": [
+        {
+          "char": "о",
+          "unicode": "U+043E",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ο",
+          "unicode": "U+03BF",
+          "script": "Grec (omicron)"
+        },
+        {
+          "char": "ｏ",
+          "unicode": "U+FF4F",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "օ",
+          "unicode": "U+0585",
+          "script": "Arménien"
+        },
+        {
+          "char": "0",
+          "unicode": "U+0030",
+          "script": "ASCII (chiffre zéro)"
+        },
+        {
+          "char": "ס",
+          "unicode": "U+05E1",
+          "script": "Hébreu"
+        },
+        {
+          "char": "ᄋ",
+          "unicode": "U+110B",
+          "script": "Hangul Jamo"
+        }
+      ]
+    },
+    "p": {
+      "latin": "p",
+      "confusables": [
+        {
+          "char": "р",
+          "unicode": "U+0440",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ρ",
+          "unicode": "U+03C1",
+          "script": "Grec"
+        },
+        {
+          "char": "ｐ",
+          "unicode": "U+FF50",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "q": {
+      "latin": "q",
+      "confusables": [
+        {
+          "char": "ԛ",
+          "unicode": "U+051B",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｑ",
+          "unicode": "U+FF51",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "r": {
+      "latin": "r",
+      "confusables": [
+        {
+          "char": "г",
+          "unicode": "U+0433",
+          "script": "Cyrillique (ghe)"
+        },
+        {
+          "char": "ｒ",
+          "unicode": "U+FF52",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "s": {
+      "latin": "s",
+      "confusables": [
+        {
+          "char": "ѕ",
+          "unicode": "U+0455",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｓ",
+          "unicode": "U+FF53",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "t": {
+      "latin": "t",
+      "confusables": [
+        {
+          "char": "τ",
+          "unicode": "U+03C4",
+          "script": "Grec"
+        },
+        {
+          "char": "ｔ",
+          "unicode": "U+FF54",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "u": {
+      "latin": "u",
+      "confusables": [
+        {
+          "char": "υ",
+          "unicode": "U+03C5",
+          "script": "Grec"
+        },
+        {
+          "char": "ս",
+          "unicode": "U+057D",
+          "script": "Arménien"
+        },
+        {
+          "char": "ｕ",
+          "unicode": "U+FF55",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "ᥡ",
+          "unicode": "U+1961",
+          "script": "Tai Le"
+        }
+      ]
+    },
+    "v": {
+      "latin": "v",
+      "confusables": [
+        {
+          "char": "ν",
+          "unicode": "U+03BD",
+          "script": "Grec (nu)"
+        },
+        {
+          "char": "ѵ",
+          "unicode": "U+0475",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｖ",
+          "unicode": "U+FF56",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "w": {
+      "latin": "w",
+      "confusables": [
+        {
+          "char": "ѡ",
+          "unicode": "U+0461",
+          "script": "Cyrillique (omega)"
+        },
+        {
+          "char": "ԝ",
+          "unicode": "U+051D",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｗ",
+          "unicode": "U+FF57",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "x": {
+      "latin": "x",
+      "confusables": [
+        {
+          "char": "х",
+          "unicode": "U+0445",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "χ",
+          "unicode": "U+03C7",
+          "script": "Grec (chi)"
+        },
+        {
+          "char": "ｘ",
+          "unicode": "U+FF58",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "y": {
+      "latin": "y",
+      "confusables": [
+        {
+          "char": "у",
+          "unicode": "U+0443",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ү",
+          "unicode": "U+04AF",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "ｙ",
+          "unicode": "U+FF59",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "γ",
+          "unicode": "U+03B3",
+          "script": "Grec (gamma)"
+        }
+      ]
+    },
+    "z": {
+      "latin": "z",
+      "confusables": [
+        {
+          "char": "ｚ",
+          "unicode": "U+FF5A",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "A": {
+      "latin": "A",
+      "confusables": [
+        {
+          "char": "А",
+          "unicode": "U+0410",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Α",
+          "unicode": "U+0391",
+          "script": "Grec"
+        },
+        {
+          "char": "Ａ",
+          "unicode": "U+FF21",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "B": {
+      "latin": "B",
+      "confusables": [
+        {
+          "char": "В",
+          "unicode": "U+0412",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Β",
+          "unicode": "U+0392",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｂ",
+          "unicode": "U+FF22",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "C": {
+      "latin": "C",
+      "confusables": [
+        {
+          "char": "С",
+          "unicode": "U+0421",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ϲ",
+          "unicode": "U+03F9",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｃ",
+          "unicode": "U+FF23",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "D": {
+      "latin": "D",
+      "confusables": [
+        {
+          "char": "Ｄ",
+          "unicode": "U+FF24",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "E": {
+      "latin": "E",
+      "confusables": [
+        {
+          "char": "Е",
+          "unicode": "U+0415",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ε",
+          "unicode": "U+0395",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｅ",
+          "unicode": "U+FF25",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "F": {
+      "latin": "F",
+      "confusables": [
+        {
+          "char": "Ｆ",
+          "unicode": "U+FF26",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "G": {
+      "latin": "G",
+      "confusables": [
+        {
+          "char": "Ԍ",
+          "unicode": "U+050C",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｇ",
+          "unicode": "U+FF27",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "H": {
+      "latin": "H",
+      "confusables": [
+        {
+          "char": "Н",
+          "unicode": "U+041D",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Η",
+          "unicode": "U+0397",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｈ",
+          "unicode": "U+FF28",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "I": {
+      "latin": "I",
+      "confusables": [
+        {
+          "char": "І",
+          "unicode": "U+0406",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ι",
+          "unicode": "U+0399",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｉ",
+          "unicode": "U+FF29",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "J": {
+      "latin": "J",
+      "confusables": [
+        {
+          "char": "Ј",
+          "unicode": "U+0408",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｊ",
+          "unicode": "U+FF2A",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "K": {
+      "latin": "K",
+      "confusables": [
+        {
+          "char": "К",
+          "unicode": "U+041A",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Κ",
+          "unicode": "U+039A",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｋ",
+          "unicode": "U+FF2B",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "L": {
+      "latin": "L",
+      "confusables": [
+        {
+          "char": "Ⅼ",
+          "unicode": "U+216C",
+          "script": "Chiffre romain"
+        },
+        {
+          "char": "Ｌ",
+          "unicode": "U+FF2C",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "M": {
+      "latin": "M",
+      "confusables": [
+        {
+          "char": "М",
+          "unicode": "U+041C",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Μ",
+          "unicode": "U+039C",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｍ",
+          "unicode": "U+FF2D",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "N": {
+      "latin": "N",
+      "confusables": [
+        {
+          "char": "Ν",
+          "unicode": "U+039D",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｎ",
+          "unicode": "U+FF2E",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "O": {
+      "latin": "O",
+      "confusables": [
+        {
+          "char": "О",
+          "unicode": "U+041E",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ο",
+          "unicode": "U+039F",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｏ",
+          "unicode": "U+FF2F",
+          "script": "Latin pleine chasse"
+        },
+        {
+          "char": "0",
+          "unicode": "U+0030",
+          "script": "ASCII (chiffre zéro)"
+        }
+      ]
+    },
+    "P": {
+      "latin": "P",
+      "confusables": [
+        {
+          "char": "Р",
+          "unicode": "U+0420",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ρ",
+          "unicode": "U+03A1",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｐ",
+          "unicode": "U+FF30",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "Q": {
+      "latin": "Q",
+      "confusables": [
+        {
+          "char": "Ｑ",
+          "unicode": "U+FF31",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "R": {
+      "latin": "R",
+      "confusables": [
+        {
+          "char": "Ｒ",
+          "unicode": "U+FF32",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "S": {
+      "latin": "S",
+      "confusables": [
+        {
+          "char": "Ѕ",
+          "unicode": "U+0405",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｓ",
+          "unicode": "U+FF33",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "T": {
+      "latin": "T",
+      "confusables": [
+        {
+          "char": "Т",
+          "unicode": "U+0422",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Τ",
+          "unicode": "U+03A4",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｔ",
+          "unicode": "U+FF34",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "U": {
+      "latin": "U",
+      "confusables": [
+        {
+          "char": "Ս",
+          "unicode": "U+054D",
+          "script": "Arménien"
+        },
+        {
+          "char": "Ｕ",
+          "unicode": "U+FF35",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "V": {
+      "latin": "V",
+      "confusables": [
+        {
+          "char": "Ѵ",
+          "unicode": "U+0474",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｖ",
+          "unicode": "U+FF36",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "W": {
+      "latin": "W",
+      "confusables": [
+        {
+          "char": "Ԝ",
+          "unicode": "U+051C",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｗ",
+          "unicode": "U+FF37",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "X": {
+      "latin": "X",
+      "confusables": [
+        {
+          "char": "Х",
+          "unicode": "U+0425",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Χ",
+          "unicode": "U+03A7",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｘ",
+          "unicode": "U+FF38",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "Y": {
+      "latin": "Y",
+      "confusables": [
+        {
+          "char": "Υ",
+          "unicode": "U+03A5",
+          "script": "Grec"
+        },
+        {
+          "char": "Ү",
+          "unicode": "U+04AE",
+          "script": "Cyrillique"
+        },
+        {
+          "char": "Ｙ",
+          "unicode": "U+FF39",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    },
+    "Z": {
+      "latin": "Z",
+      "confusables": [
+        {
+          "char": "Ζ",
+          "unicode": "U+0396",
+          "script": "Grec"
+        },
+        {
+          "char": "Ｚ",
+          "unicode": "U+FF3A",
+          "script": "Latin pleine chasse"
+        }
+      ]
+    }
+  },
+  "special_cases": {
+    "invisible_characters": [
+      {
+        "char": "​",
+        "unicode": "U+200B",
+        "name": "ZERO WIDTH SPACE"
+      },
+      {
+        "char": "‍",
+        "unicode": "U+200D",
+        "name": "ZERO WIDTH JOINER"
+      },
+      {
+        "char": "‮",
+        "unicode": "U+202E",
+        "name": "RIGHT-TO-LEFT OVERRIDE"
+      },
+      {
+        "char": "﻿",
+        "unicode": "U+FEFF",
+        "name": "BOM"
+      }
+    ],
+    "confusable_symbols": [
+      {
+        "char": "–",
+        "unicode": "U+2013",
+        "name": "EN DASH"
+      },
+      {
+        "char": "—",
+        "unicode": "U+2014",
+        "name": "EM DASH"
+      },
+      {
+        "char": "−",
+        "unicode": "U+2212",
+        "name": "MINUS SIGN"
+      },
+      {
+        "char": "。",
+        "unicode": "U+3002",
+        "name": "Ideographic full stop"
+      }
+    ],
+    "mathematical_letters": [
+      {
+        "char": "𝗮",
+        "unicode": "U+1D5EE",
+        "name": "Mathematical Sans-Serif Bold Small A"
+      },
+      {
+        "char": "𝒂",
+        "unicode": "U+1D482",
+        "name": "Mathematical Script Small A"
+      },
+      {
+        "char": "𝖆",
+        "unicode": "U+1D586",
+        "name": "Mathematical Fraktur Small A"
+      }
+    ]
+  }
+}
