@@ -8,8 +8,7 @@ Au fil des semaines, la liste a continué de s’enrichir, dépassant allégreme
 
 - [Télécharger et installer notre extension pour Firefox](https://addons.mozilla.org/fr/firefox/addon/alerte-sur-les-sites-genai/)
 - [Télécharger et installer notre extension pour Chrome](https://chromewebstore.google.com/detail/alerte-sur-les-sites-gena/bcmpghnhminmlljeomngepamejbopffc?authuser=0&hl=fr)
-
-Une version pour Safari (macOS) est en préparation : le paquet existe dans ce dépôt mais n'est pas encore publié sur l'App Store.
+- [Télécharger et installer notre extension pour Safari](https://apps.apple.com/us/app/alerte-sur-les-sites-genai/id6828464311?mt=12)
 
 ## Ce que fait l'extension
 
