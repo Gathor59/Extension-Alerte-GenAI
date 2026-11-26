@@ -2,7 +2,7 @@
 
 En marge de [l’enquête de Jean-Marc Manach sur des médias en français générés par IA](https://next.ink/153613/enquete-plus-de-1-000-medias-en-francais-generes-par-ia-polluent-le-web-et-google/) nous avons développé une extension pour Chrome, Edge et Firefox (y compris en version mobile sur Android), ainsi qu'un paquet pour Safari sur Mac, afin d’être alerté lorsque vous visitez un des sites que nous avons identifiés (à la main).
 
-Au fil des semaines, la liste a continué de s’enrichir, dépassant allégrement les 1 500 puis les 2 000 et maintenant 3 000 domaines… et ce n’est pas fini ! En plus de nouvelles listes, nous avons ajouté une mise à jour automatique de la liste dans la version 2.0 de notre extension. Cette extension a été développée à l’aide de l’IA générative Claude, avec une supervision humaine.
+Au fil des mois, la liste a continué de s’enrichir, dépassant allégrement les 20 000 domaines… et ce n’est pas fini ! En plus de nouvelles listes, nous avons ajouté des mises à jour automatiquse des listes dans la version 2.x de notre extension, puis des options multilingues dans la 3.x. Cette extension a été développée à l’aide de l’IA générative Claude, avec une supervision humaine.
 
 ## Télécharger notre extension depuis les Web Store :
 
